@@ -1,2 +1,2 @@
 export * from './mongo-adapter-client'
-export * from './mongo-connection'
+export * from '../mongo-connection/mongo-connection'

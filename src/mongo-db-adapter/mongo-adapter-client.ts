@@ -1,4 +1,4 @@
-import {MongoConnection} from "./mongo-connection";
+import {MongoConnection} from "../mongo-connection";
 import {
     CollectionBulkWriteOptions,
     CollectionCreateOptions,

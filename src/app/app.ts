@@ -1,5 +1,7 @@
 import * as express from 'express'
 import {InitialApp} from "./interface";
+import {MongoConnection} from "../mongo-db-adapter";
+import {MongoConnectionOption} from "../mongo-connection";
 
 export class App {
     protected app: express.Application
@@ -24,10 +26,9 @@ export class App {
         }
     }
 
-    public listen():void{
-        this.app.listen(this.port,()=>{
-            console.log('Server listen on port: '+this.port)
-        })
+    public listen(dbName:string,connectionOption: MongoConnectionOption):void{
+         this.app.listen(this.port,async ()=>{
+             await MongoConnection.getConnection().connect(dbName,connectionOption)
+         })
     }
-
 }
