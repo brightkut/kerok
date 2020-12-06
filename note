@@ -1,7 +1,0 @@
-// command compile
-tsc
-
-//push to registry
-npm login
-// need to change version package.json first
-npm pubish
