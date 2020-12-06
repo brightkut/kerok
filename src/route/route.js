@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.Route = void 0;
 var express = require("express");
 var Route = /** @class */ (function () {
@@ -13,4 +13,3 @@ var Route = /** @class */ (function () {
     return Route;
 }());
 exports.Route = Route;
-//# sourceMappingURL=route.js.map

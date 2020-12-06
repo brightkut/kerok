@@ -35,9 +35,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.MongoAdapterClient = void 0;
-var mongo_connection_1 = require("./mongo-connection");
+var mongo_connection_1 = require("../mongo-connection");
 var mongodb_1 = require("mongodb");
 var MongoAdapterClient = /** @class */ (function () {
     function MongoAdapterClient() {
@@ -252,7 +252,7 @@ var MongoAdapterClient = /** @class */ (function () {
      * ### Description
      *   - delete document
      */
-    MongoAdapterClient.prototype.delete = function (collectionName, query, option) {
+    MongoAdapterClient.prototype["delete"] = function (collectionName, query, option) {
         return __awaiter(this, void 0, void 0, function () {
             var e_10;
             return __generator(this, function (_a) {
@@ -340,4 +340,3 @@ var MongoAdapterClient = /** @class */ (function () {
     return MongoAdapterClient;
 }());
 exports.MongoAdapterClient = MongoAdapterClient;
-//# sourceMappingURL=mongo-adapter-client.js.map

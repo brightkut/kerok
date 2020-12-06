@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.MongoConnection = void 0;
 var mongodb_1 = require("mongodb");
 var MongoConnection = /** @class */ (function () {
@@ -47,20 +47,15 @@ var MongoConnection = /** @class */ (function () {
         }
         return this.connection;
     };
-    MongoConnection.prototype.connect = function () {
+    MongoConnection.prototype.connect = function (dbName, connectionOption) {
         return __awaiter(this, void 0, void 0, function () {
             var db;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, mongodb_1.MongoClient.connect('mongodb://localhost:27017', {
-                            auth: {
-                                user: 'root',
-                                password: 'example'
-                            }
-                        })];
+                    case 0: return [4 /*yield*/, mongodb_1.MongoClient.connect(connectionOption.url, connectionOption.options)];
                     case 1:
                         db = _a.sent();
-                        this.db = db.db('kerok');
+                        this.db = db.db(dbName);
                         return [2 /*return*/];
                 }
             });
@@ -72,4 +67,3 @@ var MongoConnection = /** @class */ (function () {
     return MongoConnection;
 }());
 exports.MongoConnection = MongoConnection;
-//# sourceMappingURL=mongo-connection.js.map

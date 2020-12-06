@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 exports.Middleware = void 0;
 var util = require("util");
 var Middleware = /** @class */ (function () {
@@ -13,4 +13,3 @@ var Middleware = /** @class */ (function () {
     return Middleware;
 }());
 exports.Middleware = Middleware;
-//# sourceMappingURL=middleware.js.map

@@ -1,5 +1,4 @@
 ## Install
-
 Using npm:
 ```shell
 $ npm i -g kerok
