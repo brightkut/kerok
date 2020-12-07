@@ -7,7 +7,9 @@ import {
     FindOneOptions, IndexOptions, IndexSpecification,
     MongoError, UpdateManyOptions, UpdateOneOptions
 } from "mongodb";
+import {singleton} from "tsyringe";
 
+@singleton()
 export class MongoAdapterClient {
     protected db:Db
 
@@ -167,11 +169,7 @@ export class MongoAdapterClient {
     public async getCollection(collectionName:string):Promise<boolean>{
         const collection = await this.db.listCollections({name:collectionName}).toArray()
 
-        if (collection.length==0){
-            return false
-        }
-
-        return true
+        return collection.length != 0;
     }
 }
 

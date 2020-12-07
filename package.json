@@ -1,6 +1,6 @@
 {
   "name": "kerok",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.5.8"
+    "mongodb": "^3.5.8",
+    "tsyringe": "^4.4.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.1",
