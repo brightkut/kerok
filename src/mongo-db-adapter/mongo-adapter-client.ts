@@ -7,9 +7,7 @@ import {
     FindOneOptions, IndexOptions, IndexSpecification,
     MongoError, UpdateManyOptions, UpdateOneOptions
 } from "mongodb";
-import {singleton} from "tsyringe";
 
-@singleton()
 export class MongoAdapterClient {
     protected db:Db
 

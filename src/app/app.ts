@@ -25,10 +25,10 @@ export class App {
             this.app.use('/',route.getRouter())
         }
     }
-
     public listen(dbName:string,connectionOption: MongoConnectionOption):void{
          this.app.listen(this.port,async ()=>{
              await MongoConnection.getConnection().connect(dbName,connectionOption)
+             console.log("check db exist"+MongoConnection.getConnection().getDB())
          })
     }
 }
