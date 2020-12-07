@@ -1,10 +1,10 @@
-import {MongoConnection} from "../mongo-connection";
+import {MongoConnection, MongoConnectionOption} from "../mongo-connection";
 import {
     CollectionBulkWriteOptions,
     CollectionCreateOptions,
     CollectionInsertManyOptions,
     CollectionInsertOneOptions, CommonOptions, Db,
-    FindOneOptions, IndexOptions, IndexSpecification,
+    FindOneOptions, IndexOptions, IndexSpecification, MongoClient,
     MongoError, UpdateManyOptions, UpdateOneOptions
 } from "mongodb";
 
