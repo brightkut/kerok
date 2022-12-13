@@ -9,7 +9,7 @@
     "url": "git@github.com:brightkut/kerok.git"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongodb": "^3.5.8",
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.4.0"
